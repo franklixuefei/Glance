@@ -1,0 +1,190 @@
+/* 
+    Document   : notification
+    Created on : Jun 14, 2013, 10:26:56 AM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*.side-page#notification {
+    right: 0;
+    background-color: blue;
+    height: 100px;
+}*/
+
+
+span#notification-bubble {
+    background-image: url("../images/notif-green.png");
+    width: 25px;
+    height: 25px;
+    background-size: 200%;
+    display: inline-block;
+    vertical-align: -5px;
+    position: relative;
+}
+
+span#notification-bubble span {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    text-align: center;
+    width: 21px;
+}
+
+.notification-panel {
+    width: 305px;
+    height: 465px;
+    position: absolute;
+    background-image: url("../images/bg-notif.png");
+    top: 8px;
+    left: 50%;
+    background-size: 100% 100%;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    margin-left: -153px;
+}
+
+.app-android .notification-panel {
+    width: 305px;
+    height: 465px;
+    position: absolute;
+    background-image: url("../images/bg-notif.png");
+    top: 8px;
+    left: 50%;
+    background-size: 100% 100%;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: none;
+    transition: none;
+    -moz-transition: none;
+    margin-left: -153px;
+}
+
+.notification-panel.active {
+    opacity: 1;
+}
+
+.notification-panel-container {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 27px;
+}
+
+.notification-panel-container #title {
+    text-align: center;
+    height: 29px;
+    color: white;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.notification-panel-container #notification-list-container {
+    background-color: white;
+    height: 388px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    overflow: hidden;
+}
+
+.notification-panel-container #notification-list-container #notification-empty-container {
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    display: none;
+}
+
+#notification-empty-container img {
+    width: 120px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#notification-empty-container span {
+    font-size: 7px;
+    display: block;
+    text-align: center;
+    color: #A9A9A9;
+}
+
+.notification-panel-container #notification-list-container #notification-list-scroller {
+    position: relative;
+}
+
+.notif-list-item {
+    position: relative;
+    padding: 6px;
+    height: 64px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.notif-list-item .profile-pic-small {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+}
+
+.notif-list-item .notif-message {
+    color: #808080;
+    left: 81px;
+    position: absolute;
+    font-size: 12px;
+    top: 20px;
+    line-height: 16px;
+    padding-right: 4px;
+}
+
+.notif-list-item  .timestamp {
+    color: #ACACAC;
+    position: absolute;
+    font-size: 10px;
+    bottom: 6px;
+    right: 8px;
+}
+
+
+.app-content .mask {
+    opacity: 0;
+    z-index: 3001;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.app-content .mask.fadeIn {
+    -webkit-animation: fadeToDotNine 0.15s;
+    animation: fadeToDotNine 0.15s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.app-content .mask.fadeOut {
+    -webkit-animation: fadeOutFromDotNine 0.15s;
+    animation: fadeOutFromDotNine 0.15s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.notif-list-item.notif-loading {
+    height: 30px;
+}
+
+.notif-list-item.notif-loading img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32px;
+    height: auto;
+    margin-top: 4px;
+}

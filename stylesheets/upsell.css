@@ -1,0 +1,144 @@
+/* 
+    Document   : upsell
+    Created on : Jun 25, 2013, 9:51:47 AM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.upsell-password-container {
+    /*    -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;*/
+}
+
+.upsell-password-container.active {
+    transform: translateY(-150%);
+    -webkit-transform: translateY(-150%);
+    -moz-transform: translateY(-150%);
+}
+
+.upsell-password-container > * {
+    font-family: Helvetica-neue-ultra-light;
+    color: #666666;
+}
+
+.upsell-password-container .upsell-password {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9px;
+    font-size: 20px;
+    font-weight: 100 !important;
+    font-family: Helvetica-neue-ultra-light;
+    border-radius: 6px;
+    border: none;
+    -webkit-box-shadow: inset 0px 1px 3px 0px #777;
+    -webkit-appearance: none;
+    width: 180px;
+    height: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 13px;
+    padding-bottom: 7px;
+}
+
+.upsell-password-container .password-title {
+    font-size: 13px;
+    text-align: center;
+}
+
+.upsell-password-container .download {
+    color: white;
+    background-color: #7db917;
+    width: 108px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 23px;
+    border-radius: 6px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-size: 20px;
+    padding-top: 13px;
+    padding-bottom: 7px;
+    margin-top: 15px;
+}
+
+.upsell-description-container {
+    text-align: center;
+    margin-top: 7px;
+}
+
+.upsell-description-container.active {
+    -webkit-animation: fadeOutToDotOne 0.2s;
+    animation: fadeOutToDotOne 0.2s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.upsell-description-container.deactive {
+    -webkit-animation: fadeInFromDotOne 0.2s;
+    animation: fadeInFromDotOne 0.2s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+
+.upsell-description-container .description-title {
+    font-size: 23px;
+}
+
+.upsell-description-container .description-body {
+    height: 280px;
+    margin-top: 4px;
+    position:relative;
+}
+
+.description-body img:first-child {
+    position: absolute;
+    width: 230px;
+    height: 180px;
+    left: 50%;
+    margin-left: -115px;
+}
+
+.description-body img:last-child {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+    bottom: 11px;
+}
+
+.description-body .description-text {
+  font-size: 12px;
+  width: 170px;
+  position: absolute;
+  background: rgba(255,255,255,0.9);
+  border-radius: 6px;
+  top: 148px;
+  left: 50%;
+  padding: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: -105px;
+}
+
+
+.upsell-description-container > *{
+    font-weight: lighter;
+    font-family: Helvetica Neue;
+    color: #666666;
+}
+
+::-webkit-input-placeholder {
+    color: #BEBEBE !important;
+}
+
+.processing {
+    display: block;
+    width: 32px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

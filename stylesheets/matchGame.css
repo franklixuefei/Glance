@@ -1,0 +1,372 @@
+/* 
+    Document   : matchGame
+    Created on : Jun 12, 2013, 3:27:47 PM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+img#admire {
+  position: absolute;
+  left: 30px;
+  top: 7px;
+  width: 102px;
+}
+
+img#pass {
+  position: absolute;
+  right: 45px;
+  top: 7px;
+  width: 60px;
+}
+
+
+span#match-delimiter {
+  width: 1px;
+  height: 44px;
+  left: 160px;
+  position: absolute;
+  background-color: #cacaca;
+}
+
+
+.dialog_container {
+  position: absolute;
+  width: 300px;
+  height: 325px;
+  left: 50%;
+  top: 50%;
+  background-color: #efefef;
+  border-radius: 6px;
+  opacity: 0;
+  margin-left: -150px;
+  margin-top: -163px;
+}
+
+.page-container .mask.dialog-mask-fadeIn {
+  -webkit-animation: fadeToDotNine 0.2s;
+  animation: fadeToDotNine 0.2s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.page-container .mask.dialog-mask-fadeOut {
+  -webkit-animation: fadeOutFromDotNine 0.2s;
+  animation: fadeOutFromDotNine 0.2s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.dialog_container.active {
+  -webkit-animation: fadeInComplete 0.2s;
+  animation: fadeInComplete 0.2s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.dialog_container.deactive {
+  -webkit-animation: fadeOutComplete 0.2s;
+  animation: fadeOutComplete 0.2s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.app-android .dialog_container.active {
+  -webkit-animation: none;
+  animation: none;
+  -webkit-animation-fill-mode: none;
+  opacity: 1;
+}
+
+.dialog_container .close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: -14px;
+  top: -16px;
+  background-image: url('../images/icon-x.png');
+  background-size: 200%;
+}
+
+.dialog_container .dialog-title {
+  text-align: center;
+  margin-top: 10px;
+  color: #878787;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  height: 32px;
+  background-color: #efefef;
+}
+
+.dialog_container .dialog-main {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.dialog_container .kik-me-button {
+  height: 43px;
+  background-color: #efefef;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.kik-me-button span {
+  background-image: url(../images/icon-kik.png);
+  width: 80px;
+  height: 25px;
+  display: block;
+  background-size: 200% 100%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 9px;
+  position: relative;
+}
+
+.dialog-main .target-user-profile-pic-sharp-frame {
+  position: absolute;
+  overflow: hidden;
+  width: 184px;
+  height: 187px;
+  background-image: url(../images/profilepic.png);
+  background-size: 100% 100%;
+  left: 60px;
+  top: 12px;
+}
+
+
+.target-user-profile-pic-sharp-frame div {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 160px;
+  height: 160px;
+  z-index: -1;
+  border-radius: 100px;
+  left: 13px;
+  top: 15px;
+}
+
+.dialog-main .background-pic {
+  position: relative;
+  z-index: -1;
+  -webkit-filter: blur(4px);
+  /*filter:url("data:image/svg+xml;utf8,<svg height=\'0\' xmlns=\'http://www.w3.org/2000/svg'><filter id='svgBlur' x='-5%' y='-5%' width='110%' height='110%'><feGaussianBlur in='SourceGraphic' stdDeviation='4'/></filter></svg>#svgBlur");*/
+  left: -10px;
+  top: -10px;
+  width: 320px;
+  height: 260px;
+}
+
+.dialog-main span#target-user-name {
+  position: absolute;
+  color: white;
+  top: 198px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 19px;
+  text-shadow: 0px 1px 2px #000;
+}
+
+
+.hang-tight-container {
+  background-image: url('../images/hangtight-bg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.tut-container, .detail-panel-container {
+  background-image: url('../images/hangtight-bg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.profile-loading-container {
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.image-viewer-wrapper .image-list-container .profile-loading-container img {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 20%;
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.hang-tight-container .hang-tight {
+  width: 280px;
+  height: 280px;
+  background-size: 100%;
+  background-position: center;
+  background-image: url('../images/hangtight-circle.png');
+  position: absolute;
+  top: 50%;
+  margin-top: -140px;
+  left: 50%;
+  margin-left: -140px;
+}
+
+.hang-tight span#hang-tight-title {
+  position: absolute;
+  top: 83px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  color: #203159;
+  font-weight: lighter;
+}
+
+.hang-tight span#hang-tight-description {
+  position: absolute;
+  font-family: Helvetica-neue-ultra-light;
+  top: 120px;
+  font-size: 19px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  /*font-weight: 100;*/
+}
+
+.tut-container .tut, .detail-panel-container .detail-panel {
+  width: 280px;
+  height: 280px;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -158px;
+  left: 50%;
+  margin-left: -140px;
+}
+
+.tut#tut-1 {
+  background-image: url('../images/new_tut.png');
+}
+
+.tut#tut-2 {
+  background-image: url('../images/new_tut.png');
+}
+
+.tut#tut-3 {
+  background-image: url('../images/tut_3.png');
+}
+
+.tut span.tut-title {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica-neue-ultra-light;
+  font-size: 21px;
+  color: white;
+  font-weight: lighter;
+}
+
+.tut span.tut-description {
+  position: absolute;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  left: 7px;
+}
+
+span.tut-description#tut-description-1 {
+  top: 129px;
+}
+
+span.tut-description#tut-description-2 {
+  top: 120px;
+}
+
+span.tut-description#tut-description-3 {
+  top: 120px;
+}
+
+.tut div.tut-swipe {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  height: 10px;
+}
+
+div.tut-swipe span {
+  color: white;
+  font-family: Helvetica-neue-ultra-light;
+}
+
+div.tut-swipe img {
+  width: 50px !important;
+  height: auto !important;
+  position: relative !important;
+  top: -15px;
+}
+
+.detail-panel {
+  margin-top: -140px !important;
+  background-image: url('../images/secretly-admired-you.png');
+}
+
+.detail-panel span.detail-panel-description {
+  position: absolute;
+  font-size: 21px;
+  width: 100%;
+  text-align: center;
+  color: #333333;
+  font-family: Helvetica-neue-ultra-light;
+  top: 52px;
+}
+
+span.detail-panel-description span#admire-count {
+  font-size: 33px;
+  color: #731C22;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+}
+
+span.detail-panel-description span#admire-range {
+  font-weight: 200;
+  font-size: 20px;
+  font-family: "Helvetica Neue";
+}
+
+.app-content-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0);
+  z-index: 10000;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+}
+
+.app-content-mask.active {
+  background-color: rgba(255,255,255,0.6);
+}
+
+.app-content-mask img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 20%;
+}

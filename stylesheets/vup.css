@@ -1,0 +1,20 @@
+/* 
+    Document   : vup
+    Created on : Jun 14, 2013, 2:26:30 PM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.app-page .app-content .app-bottombar {
+    background: #242424;
+}
+
+.app-bottombar #kik-me {
+    background-image: url("../images/kik-me.png");
+    background-size: 200% 100%;
+    width: 81.5px;
+    height: 29px;
+    top: 8px;
+    left: 120px;
+}

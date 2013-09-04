@@ -1,0 +1,130 @@
+/* 
+    Document   : matchList
+    Created on : Jun 14, 2013, 3:02:19 PM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.match-list-container {
+    position:absolute;
+    width:100%;
+}
+
+.match-list-container .match-list-scroller {
+    position: relative;
+}
+
+.match-list-container .match-list-empty {
+    position: absolute;
+    width: 100%;
+    top: 46%;
+    height: 170px;
+    margin-top: -85px;
+    display: none;
+}
+
+.match-list-empty img {
+    display: block;
+    width: 190px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.match-list-empty span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: #9a9a9a;
+    line-height: 15px;
+    margin-top: 4px;
+}
+
+.match-list-item {
+    height: 72px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #C2C7C7;
+}
+
+.match-list-item.upsell-portal {
+    height: 47px;
+    background-color: #fceac3;
+}
+
+.match-list-item div {
+    width: 56px;
+    height: 56px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.match-list-item span.item-name {
+    position: absolute;
+    left: 75px;
+    top: 16px;
+    font-size: 15px;
+    color: #686C6F;
+}
+
+.match-list-item span.item-name .unread-dot {
+    position: static;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #F06166;
+    display: inline-block;
+    vertical-align: 1px;
+    margin-left: 3px;
+}
+
+.match-list-item span.item-detail {
+    color: #767A7C;
+    font-weight: lighter;
+    font-size: 11px;
+    position: absolute;
+    top: 40px;
+    left: 76px;
+}
+
+.match-list-item.upsell-portal span.item-detail {
+    top: 14px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    color: #6c6c6c;
+    font-size: 12px;
+}
+
+.match-list-item.upsell-portal span.item-detail img {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+}
+
+.match-list-item span.item-timestamp {
+    position: absolute;
+    font-size: 10px;
+    right: 8px;
+    top: 30px;
+    color: #767A7C;
+}
+
+.match-list-item.match-loading {
+    height:42px;
+}
+
+.match-list-item.match-loading img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 32px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}

@@ -1,0 +1,115 @@
+/* 
+    Document   : settings
+    Created on : Jun 24, 2013, 11:42:22 AM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.settings-wrapper {
+    background-color: white;
+    width: 298px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    border-radius: 6px;
+    color: #7f847c;
+    padding-top: 16px;
+    font-family: Helvetica;
+}
+
+.settings-title {
+    text-align: center;
+    font-size: 18px;
+}
+.settings-content {
+    height: 60px;
+    position: relative;
+}
+
+.settings-content span {
+    font-size: 18px;
+    position: absolute;
+    left: 18px;
+    top: 20px;
+}
+
+.sok-toggle {
+    position: absolute;
+    right: 0px;
+    width: 76px;
+    height: 30px;
+    top: 18px;
+}
+
+.sok-toggle img {
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    top: -3px;
+    left: -4px;
+}
+
+.sok-toggle .toggle-frame {
+    width: 63px;
+    height: 24px;
+    background-color: #81C546;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 1px 1px 0px #666666;
+    position: absolute;
+    overflow: hidden;
+}
+
+.toggle-frame .toggle-text-wrapper {
+    width: 96px;
+    position: absolute;
+    height: 24px;
+    left: -33px;
+}
+
+.toggle-on-off {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+
+.toggle-on-off#on {
+    left: 0px;
+}
+
+.toggle-on-off#off {
+    right:0px;
+}
+
+.toggle-on-off span {
+    position: absolute;
+    top: 6px;
+    font-size: 10px;
+    color: white;
+}
+
+.toggle-on-off#on span {
+    left: 8px;
+}
+
+.toggle-on-off#off span {
+    left: 20px;
+}
+
+.sok-toggle .animated {
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+}
+
+.sok-toggle img.animated.active {
+    transform: translateX(35px);
+    -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+}
+
+.sok-toggle .toggle-text-wrapper.animated.active {
+    transform: translateX(33px);
+    -webkit-transform: translateX(33px);
+    -moz-transform: translateX(33px);
+}

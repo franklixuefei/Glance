@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+    <head>
+        <title>Glance</title>
+        <meta name="viewport" content="width=device-width,
+              initial-scale=1.0,
+              maximum-scale=1.0,
+              user-scalable=no">
+        <meta name="description" content="It&#39;s &#39;Tinder meets Kik&#39;. Heart someone anonymously; if they heart you back, you&#39;re matched and ready to Kik.">
+        <meta name="kik-more" content="glanceonkik.com">
+        <meta name="kik-prefer" content="true">
+        <meta name="kik-unsupported" content="android-2.2,ios-4">
+        <meta name="kik-hide-form-helpers" content="true">
+        <script src="javascripts/flurry.js"></script> 
+        <script src="javascripts/config.js"></script>
+        <script>FlurryAgent.startSession(FLURRY_KEY);</script>
+        <script>FlurryAgent.setAppVersion("1.0");</script>
+        <script language="JavaScript" src="http://j.maxmind.com/app/geoip.js"></script>
+        <link rel="stylesheet" href="stylesheets/default.css">
+        <link rel="stylesheet" href="stylesheets/sok.css">
+        <link rel="stylesheet" href="stylesheets/imageViewer.css">
+        <link rel="stylesheet" href="stylesheets/matchGame.css">
+        <link rel="stylesheet" href="stylesheets/intro.css">
+        <link rel="stylesheet" href="stylesheets/menu.css">
+        <link rel="stylesheet" href="stylesheets/notification.css">
+        <link rel="stylesheet" href="stylesheets/vup.css">
+        <link rel="stylesheet" href="stylesheets/matchPreferences.css">
+        <link rel="stylesheet" href="stylesheets/matchList.css">
+        <link rel="stylesheet" href="stylesheets/myProfile.css">
+        <link rel="stylesheet" href="stylesheets/settings.css">
+        <link rel="stylesheet" href="stylesheets/upsell.css">
+        <link rel="stylesheet" href="stylesheets/register.css">
+        <link rel="stylesheet" href="other/spinningwheel.css"/>
+        <link rel="terms" href="http://www.singlesonkik.com/termsconditions.html">
+        <link rel="privacy" href="http://www.singlesonkik.com/privacypolicy.html">
+        <link rel="kik-icon" href="images/icon@2x.png">
+    </head>
+    <body>
+
+        <!-- intro page -->
+
+        <div class="app-page" data-page="intro">
+            <div class="page-container">
+                <div class="app-content" style="background-image: url('images/bg.png'); background-size: cover; background-position: center;" >
+
+                    <div class="intro-profile-pic">
+                        <div class="camera-container">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="basic-info-wrapper">
+                        <div class="basic-info-container">
+                            <div class="basic-info-buttons select" id="name">
+                                <span class="button-title" id="name-title">Name</span>
+                                <span class="button-value" id="name-value">Loading...</span>
+                                <img class="button-arrow" id="name-arrow" src="images/arrow.png" />
+                            </div>
+                            <div class="basic-info-options-container" id="name-options">
+                                <div class="name-input-container">
+                                    <input id="name-input" type="text" placeholder="Please enter your name" maxlength="20"/>
+                                </div>
+                            </div>
+                            <div class="basic-info-buttons select" id="age">
+                                <span class="button-title" id="age-title">Birthday</span>
+                                <span class="button-value" id="age-value">Loading...</span>
+                                <img class="button-arrow"  id="age-arrow" src="images/arrow.png" />
+                            </div>
+
+                            <div class="basic-info-buttons select" id="gender">
+                                <span class="button-title" id="gender-title">Gender</span>
+                                <span class="button-value" id="gender-value">Loading...</span>
+                                <img class="button-arrow" id="gender-arrow" src="images/arrow.png" />
+                            </div>
+                            <div class="basic-info-options-container" id="gender-options">
+                                <div class="basic-info-buttons basic-info-options">
+                                    <span class="option-text" id="gender-text-1">Male</span>
+                                    <img class="option-arrow" id="gender-arrow-1" src="images/icon-check.png" />
+                                </div>
+                                <div class="basic-info-buttons basic-info-options">
+                                    <span class="option-text" id="gender-text-2">Female</span>
+                                    <img class="option-arrow" id="gender-arrow-2" src="images/icon-check.png" />
+                                </div>
+                            </div>
+                            <div class="basic-info-buttons select" id="location">
+                                <span class="button-title" id="location-title">Location</span>
+                                <span class="button-value" id="location-value">Loading...</span>
+                                <img class="button-arrow"  id="location-arrow" src="images/arrow.png" />
+                            </div>
+                            <div class="basic-info-options-container" id="location-options">
+                                <div class="location-search-input-container">
+                                    <input id="location-search-input" type="text" placeholder="Please enter your city"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <div class="loader-wrapper">
+                            <img src="images/loader.gif" class="loader" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- view user profile page -->
+
+        <div class="app-page" data-page="vup">
+            <div class="page-container">
+                <div class="app-topbar">
+                    <div class="app-button left back black">
+                        <span></span>
+                    </div>
+                    <div class="app-button right">
+                        <span></span>
+                    </div>
+                    <div class="app-title">glance <span id="notification-bubble"><span></span></span></div>
+                    <div class="notification-button"></div>
+                </div>
+                <div class="app-content" style="background: #252525;">
+                    <div class="image-viewer-wrapper">
+                        <div class="image-list-container">
+                            <div class="image-pointer"></div>
+                        </div>
+                    </div>
+                    <div class="app-bottombar-backing"></div>
+                    <div class="app-bottombar">
+                        <span id="kik-me"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- debug page -->
+
+        <div class="app-page" data-page="debug">
+            <div class="app-topbar">
+                <div class="app-button left back black" data-back="true" >
+                    <span></span>
+                </div>
+                <div class="app-title">DEBUG</div>
+            </div>
+            <div class="page-container">
+                <div class="app-content">
+                    <div class="debug">
+                        <input class="app-input" id="gender"/>
+                        <input class="app-input" id="age"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- settings page -->
+        <div class="app-page" data-page="settings" style="background: #D5E3EB;">
+            <div class="page-container">
+                <div class="app-topbar">
+                    <div class="app-button left back black">
+                        <span></span>
+                    </div>
+                    <div class="app-title">settings <span id="notification-bubble"><span></span></span></div>
+                    <div class="notification-button"></div>
+                </div>
+                <div class="app-content background-image">
+                    <div class="settings-wrapper">
+                        <div class="settings-notif-container">
+                            <div class="settings-title">
+                                Notifications
+                            </div>
+                            <div class="settings-content-container">
+                                <div class="settings-content" id="matches">
+                                    <span>Matches</span>
+                                    <div class="sok-toggle">
+                                        <div class="toggle-frame">
+                                            <div class="toggle-text-wrapper animated active">
+                                                <div class="toggle-on-off" id="on">
+                                                    <span>ON</span>
+                                                </div>
+                                                <div class="toggle-on-off" id="off">
+                                                    <span>OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="animated active" src="images/toggle.png" />
+                                    </div>
+                                </div>
+                                <div class="settings-content" id="hearts">
+                                    <span>Hearts</span>
+                                    <div class="sok-toggle">
+                                        <div class="toggle-frame">
+                                            <div class="toggle-text-wrapper animated active">
+                                                <div class="toggle-on-off" id="on">
+                                                    <span>ON</span>
+                                                </div>
+                                                <div class="toggle-on-off" id="off">
+                                                    <span>OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="animated active" src="images/toggle.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- match preferences page -->
+
+        <div class="app-page" data-page="preferences" style="background: #D5E3EB;">
+            <div class="page-container">
+                <div class="app-topbar">
+                    <div class="app-button left back black">
+                        <span></span>
+                    </div>
+                    <div class="app-title">preferences <span id="notification-bubble"><span></span></span></div>
+                    <div class="notification-button"></div>
+                </div>
+
+                <div class="app-content background-image">
+                    <div class="preference-block" id="gender-block">
+                        <div class="block-title-container" id="gender-block-title-container">
+                            <div class="title-line" id="left"></div>
+                            <div class="title-line" id="right"></div>
+                            <span class="block-title" id="gender-block-title">Gender</span>
+                        </div>
+                        <div class="block-content-container" id="gender-block-content-container">
+                            <div class="gender-option" id="everyone">
+                                <div></div>
+                            </div>
+                            <div class="gender-option" id="male">
+                                <div></div>
+                            </div>
+                            <div class="gender-option" id="female">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preference-block" id="distance-block">
+                        <div class="block-title-container" id="distance-block-title-container">
+                            <div class="title-line" id="left"></div>
+                            <div class="title-line" id="right"></div>
+                            <span class="block-title" id="distance-block-title">Distance</span>
+                        </div>
+                        <div class="block-content-container" id="distance-block-content-container">
+                            <div class="distance-slider">
+                                <span id="min-val" class="min-max-val">10km</span>
+                                <div id="slider-body">
+                                    <div id="slider-active-body">
+                                        <div id="slider-thumb"></div>
+                                        <span id="slider-value"></span>
+                                    </div>
+                                </div>
+                                <span id="max-val" class="min-max-val">All</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- my match list page -->
+
+        <div class="app-page" data-page="matchList" style="background: #D5E3EB;">
+            <div class="page-container">
+                <div class="app-topbar">
+                    <div class="app-button right">
+                        <span></span>
+                    </div>
+                    <div class="app-title">my matches <span id="notification-bubble"><span></span></span></div>
+                    <div class="notification-button"></div>
+                </div>
+
+                <div class="app-content background-image" data-no-scroll=true >
+                    <div class="match-list-container scrollable">
+                        <div class="match-list-scroller">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- my profile page -->
+
+        <div class="app-page" data-page="myProfile" style="background: #D8E6ED;">
+            <div class="page-container">
+                <div class="app-topbar">
+                    <div class="app-button left back black" >
+                        <span></span>
+                    </div>
+                    <div class="app-title">my profile <span id="notification-bubble"><span></span></span></div>
+                    <div class="notification-button"></div>
+                </div>
+
+                <div class="app-content" style="background: #D8E6ED;" data-no-scroll=true>
+                    <div class="myprofile-container scrollable">
+                        <div class="myprofile-scroller">
+                            <div class="basic-info-wrapper">
+                                <div class="basic-info-container">
+                                    <div class="basic-info-buttons select" id="name">
+                                        <span class="button-title" id="name-title">Name</span>
+                                        <span class="button-value" id="name-value"></span>
+                                        <img class="button-arrow" id="name-arrow" src="images/arrow.png" />
+                                    </div>
+                                    <div class="basic-info-options-container" id="name-options">
+                                        <div class="name-input-container">
+                                            <input id="name-input" type="text" placeholder="Please enter your name" maxlength="20"/>
+                                        </div>
+                                    </div>
+                                    <div class="basic-info-buttons select" id="age">
+                                        <span class="button-title" id="age-title">Age</span>
+                                        <span class="button-value" id="age-value"></span>
+                                        <img class="button-arrow"  id="age-arrow" src="images/arrow.png" />
+                                    </div>
+
+                                    <div class="basic-info-buttons select" id="gender">
+                                        <span class="button-title" id="gender-title">Gender</span>
+                                        <span class="button-value" id="gender-value"></span>
+                                        <img class="button-arrow" id="gender-arrow" src="images/arrow.png" />
+                                    </div>
+                                    <div class="basic-info-options-container" id="gender-options">
+                                        <div class="basic-info-buttons basic-info-options">
+                                            <span class="option-text" id="gender-text-1"></span>
+                                            <img class="option-arrow" id="gender-arrow-1" src="images/icon-check.png" />
+                                        </div>
+                                        <div class="basic-info-buttons basic-info-options">
+                                            <span class="option-text" id="gender-text-2"></span>
+                                            <img class="option-arrow" id="gender-arrow-2" src="images/icon-check.png" />
+                                        </div>
+                                    </div>
+                                    <div class="basic-info-buttons select" id="location">
+                                        <span class="button-title" id="location-title">Location</span>
+                                        <span class="button-value" id="location-value"></span>
+                                        <img class="button-arrow"  id="location-arrow" src="images/arrow.png" />
+                                    </div>
+                                    <div class="basic-info-options-container" id="location-options">
+                                        <div class="location-search-input-container">
+                                            <input id="location-search-input" type="text" placeholder="Please enter your city"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="add-new-photo"></div>
+
+                            <div class="photos-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- matchGame page -->
+
+        <div class="app-page" data-page="matchGame">
+            <div class="page-container">
+                <div class="app-topbar">
+                    <div class="app-button right">
+                        <span></span>
+                    </div>
+                    <div class="app-title">match game <span id="notification-bubble"><span></span></span></div>
+                    <div class="notification-button"></div>
+                </div>
+                <div class="app-content" data-no-scroll=true style="background: #252525;">
+                    <div class="image-viewer-wrapper">
+                        <div class="image-list-container">
+                            <div class="image-pointer"></div>
+                        </div>
+                    </div>
+
+                    <div class="app-bottombar noshow">
+                        <span id="left"></span>
+                        <span id="right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- upsell page -->
+
+        <div class="app-page" data-page="upsell" style="background: #D5E3EB;">
+            <div class="page-container">
+                <div class="app-content background-image">
+                    <div class="upsell-description-container">
+                        <div class="description-title">Get the full experience!</div>
+                        <div class="description-body">
+                            <img src="images/iphone.png" />
+                            <div class="description-text"><span style="color: #7db917;">Even more</span> matches!<br/><br/><span style="color: #7db917;">Reach out to people directly</span> instead of waiting for matches.</div>
+                            <img src="images/upsell_arrow.png" />
+                        </div>
+                    </div>
+                    <div class="upsell-password-container">
+                        <div class="password-title">Pick a password to save your account information.</div>
+                        <input type="password" class="upsell-password" id="password" placeholder="Enter Password" />
+                        <input type="password" class="upsell-password" id="password-conf" placeholder="Confirm Password" />
+                        <div class="download">DOWNLOAD</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- register page -->
+
+        <div class="app-page" data-page="register" style="background: #D5E3EB;">
+            <div class="page-container">
+                <div class="app-content background-image" data-no-scroll=true>
+                    <div class="splash"></div>
+                    <div class="sok-logo">Glance</div>
+                    <div class="sok-description" id="description-1">Get matched with other singles on Kik Messenger. It's fun and free.</div>
+                    <div class="sok-description" id="description-2">What are you waiting for?</div>
+                    <div class="sok-register">REGISTER</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://cdn.kik.com/cards/0/cards.js"></script>
+        <script src="javascripts/zepto.min.js"></script>
+        <script src="javascripts/iscroll.js"></script>
+        <script src="other/spinningwheel.js"></script>
+        <script src="javascripts/sok.js"></script>
+        <script src="javascripts/imageViewer.js"></script>
+        <script src="javascripts/matchGame.js"></script>
+        <script src="javascripts/intro.js"></script>
+        <script src="javascripts/menu.js"></script>
+        <script src="javascripts/notification.js"></script>
+        <script src="javascripts/vup.js"></script>
+        <script src="javascripts/matchPreferences.js"></script>
+        <script src="javascripts/matchList.js"></script>
+        <script src="javascripts/myProfile.js"></script>
+        <script src="javascripts/settings.js"></script>
+        <script src="javascripts/upsell.js"></script>
+        <script src="javascripts/register.js"></script>
+        <script src="javascripts/app.js"></script>
+
+    </body>
+</html>

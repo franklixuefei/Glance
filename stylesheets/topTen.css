@@ -1,0 +1,30 @@
+/* 
+    Document   : topTen
+    Created on : Jun 12, 2013, 3:26:41 PM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+img#download-sok {
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    width: 102px;
+}
+
+img#send-kik {
+    position: absolute;
+    right: 45px;
+    top: 7px;
+    width: 60px;
+}
+
+
+span#topten-delimiter {
+    width: 1px;
+    height: 44px;
+    left: 160px;
+    position: absolute;
+    background-color: #cacaca;
+}

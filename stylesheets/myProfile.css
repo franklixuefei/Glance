@@ -1,0 +1,238 @@
+/* 
+    Document   : myProfile
+    Created on : Jun 19, 2013, 2:35:31 PM
+    Author     : xuefei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.app-content .myprofile-container {
+    position: absolute;
+    width: 100%;
+}
+
+.app-content .myprofile-scroller {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.app-content .basic-info-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #F1F1F1;
+    width: 262px;
+    margin-top: 15px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 4px 1px #CDD4D7;
+    box-shadow: 0px 0px 4px 1px #CDD4D7;
+    margin-left: auto;
+    margin-right: auto;
+    /*-webkit-transition: all 0.2s ease-in-out;*/
+    /*transition: all 0.2s ease-in-out;*/
+    /*-moz-transition: all 0.2s ease-in-out;*/
+}
+
+.basic-info-wrapper .basic-info-container {
+
+}
+
+.basic-info-container .basic-info-buttons {
+    height: 45px;
+    border-bottom: 1px solid #E6E6E6;
+    color: #7d7d7d;
+    position: relative;
+}
+
+.basic-info-container .basic-info-buttons.selected {
+    color: #8D2B2B;
+}
+
+.basic-info-container .basic-info-buttons .button-title {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    font-size: 14px;
+}
+
+.basic-info-container .basic-info-buttons .button-value {
+    top: 14px;
+    position: absolute;
+    right: 30px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.basic-info-container .basic-info-buttons .button-arrow {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 6px;
+    top: 13px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.basic-info-container .basic-info-buttons.selected .button-arrow {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.basic-info-container .basic-info-options-container {
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.app-android .basic-info-container .basic-info-options-container {
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: none;
+    transition: none;
+    -moz-transition: none;
+}
+
+/*.basic-info-container .basic-info-options-container.active {
+    transform: scale(1,0);
+    -webkit-transform: scale(1,0);  Safari and Chrome 
+}*/
+
+.basic-info-options-container .basic-info-buttons.basic-info-options {
+    padding-left:28px;
+    padding-right:28px;
+}
+
+.basic-info-options-container .basic-info-buttons.basic-info-options img.option-arrow {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 28px;
+    top: 12px;
+    visibility: hidden;
+}
+
+.basic-info-options-container .basic-info-buttons.basic-info-options span.option-text {
+    position: absolute;
+    left: 28px;
+    top: 14px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.basic-info-options-container .basic-info-buttons.basic-info-options.selected {
+
+
+}
+
+.basic-info-options-container .basic-info-buttons.basic-info-options.selected img.option-arrow {
+    visibility: visible;
+}
+
+.basic-info-options-container .basic-info-buttons.basic-info-options.selected span.option-text {
+    color: #272727;
+}
+
+#sw-slots .sw-center { text-align:center; }
+
+
+div.add-new-photo {
+    background-image: url("../images/button-addpic.png");
+    width: 293px;
+    height: 55px;
+    background-size: 200%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+
+}
+
+div.photos-container {
+    margin-top: 8px;
+}
+
+.photo-container {
+    width: 293px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 5px 1px #444;
+    box-shadow: inset 0 0 5px 1px #444;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13px;
+    position: relative;
+    background-position: center;
+    background-size: 70px 70px;
+    background-image: url("../images/placeholder.png");
+    background-repeat: no-repeat;
+    background-color: #D4D4D4;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+}
+
+.photo-container-loader {
+    width: 293px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 5px 1px #444;
+    box-shadow: inset 0 0 5px 1px #444;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13px;
+    position: relative;
+    height: 50px;
+}
+
+.photo-delete {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: -14px;
+    top: -14px;
+    background-image: url('../images/icon-x.png');
+    background-size: 200%;
+}
+
+.photo-container-loader img {
+    width: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    top: 13px;
+}
+
+.fadeOutComplete {
+    -webkit-animation: fadeOutComplete 0.3s;
+    animation: fadeOutComplete 0.3s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.location-search-input-container, .name-input-container {
+    color: #7d7d7d;
+    position: relative;
+}
+
+.location-search-input-container #location-search-input, .name-input-container #name-input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: 100 !important;
+    border-radius: 6px;
+    border: none;
+    -webkit-box-shadow: inset 0px 1px 3px 0px #777;
+    -webkit-appearance: none;
+    width: 200px;
+    height: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #272727;
+}
