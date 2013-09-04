@@ -14,4 +14,7 @@ You are all set. Enjoy!
 </li>
 </ul>
 
+<h2>iOS Version</h2>
+Also, if you are interested in this app, please download our iOS version as well to explore more!
 
+Here is the link:<pre><a target="_blank" href="https://itunes.apple.com/ca/app/glance-on-kik/id666003351?mt=8">https://itunes.apple.com/ca/app/glance-on-kik/id666003351?mt=8</a></pre>
