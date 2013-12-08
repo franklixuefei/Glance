@@ -19,5 +19,4 @@ Also, if you are interested in this app, please download our iOS version as well
 
 Here is the link:<pre><a target="_blank" href="https://itunes.apple.com/ca/app/glance-on-kik/id666003351?mt=8">https://itunes.apple.com/ca/app/glance-on-kik/id666003351?mt=8</a></pre>
 
-<h3>Notice:</h3><p> The product has been offline due to internal reasons of the company :-( Sorry.</h3>
-<h3>Notice:</h3><p> The product has been offline for internal reasons of the companyNotice: The product has been offline for internal reasons of the company</p>
+<h3>Notice:</h3><p> The product has been offline due to internal reasons of the company :-( Sorry and thanks for your interest.</p>
